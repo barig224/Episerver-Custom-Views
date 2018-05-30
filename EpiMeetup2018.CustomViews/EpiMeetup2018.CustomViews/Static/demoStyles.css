@@ -1,0 +1,125 @@
+﻿p.noteAlt {
+    background-color: #f0f7fb;
+    background-image: url(../Static/bulb.png);
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #3498db;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.noteCheck {
+    background-color: #E6F6EF;
+    background-image: url(../Static/checkmark.png);
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #2ECC71;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.noteWarning {
+    background-color: #FCF7F2;
+    background-image: url(../Static/warning.png);
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #E74B3B;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.hero {
+    position:relative;
+}
+
+.hero-header-container {
+    top:0;
+    height:100%;
+    width:100%;
+    max-width:100%;
+    padding:0;
+    position:absolute;
+}
+
+.hero-header {
+    position: absolute;
+    background-color: red;
+    transition: .4s;
+    padding:10px;
+}
+
+.adage-staff-info-block-items {
+    display:flex;
+    flex-wrap:wrap;
+    margin:2.4rem auto;
+}
+
+.adage-staff-info-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+.adage-staff-info-item-photo {
+    flex-basis: 250px;
+    margin-right: 2.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.adage-staff-info-item-profile {
+    flex-basis: 500px;
+}
+
+.adage-staff-info-item-photo-img {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.staff-name{
+    font-size:2.75rem;
+    line-height:1.18182;
+    color:#004175;
+    font-weight:700;
+}
+
+.staff-role {
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #004175;
+    font-weight: 700;
+}
+
+.adge-title {
+    font-size: 4.5rem;
+    line-height: 1.11111;
+    color: #004175;
+    font-weight: 700;
+    text-align:center;
+}
+
+.staff-contact{
+    font-style:italic;
+}

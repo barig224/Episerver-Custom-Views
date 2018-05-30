@@ -1,0 +1,17 @@
+﻿@model EpiMeetup2018.CustomViews.Models.Pages.ProductionDetailsPage
+
+@{ Layout = "~/Views/Shared/_Root.cshtml"; }
+
+
+<section class="adage-block" style="background-color:#FFF6E6;margin-top:0px;margin-bottom:0px;">
+    <div class="adage-block-inner adage-wysiwyg-block">
+        <div class="rich-text">
+            <p class="noteAlt"><em><strong>Note:&nbsp;</strong>&nbsp;</em>This page represents details about a production running at a local theatre.&nbsp; While the Episerver site contains rich content about this production, the actual transaction kicks users off to another website to complete their purchase.<br><br>That being said, developers and CMS editors may still want to reference some data from the commerce system...</p>
+        </div>
+    </div>
+</section>
+
+
+@Html.PropertyFor(m => m.Hero)
+
+@Html.PropertyFor(m => m.ContentArea)

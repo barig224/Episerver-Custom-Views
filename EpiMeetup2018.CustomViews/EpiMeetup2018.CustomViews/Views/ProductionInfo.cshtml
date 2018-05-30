@@ -1,0 +1,42 @@
+﻿
+@using EpiMeetup2018.CustomViews.Controllers.CustomViewControllers;
+
+@model ProductionInfoViewModel
+
+@{ Layout = "~/Views/Shared/_EditViewLayout.cshtml"; }
+
+
+<p class="noteAlt">
+    This View is an example of displaying data from an external API.  This demo is using hard-coded/pseudo-random information, but wiring it up to an actual end point
+    should be fairly straightforward.
+</p>
+
+<div>
+    <strong>Production Name:</strong>  @Model.Title <br />
+    <strong>Production ID:</strong>  @Model.ProductionID <br />
+    <strong>Venue Name:</strong>  @Model.VenueName
+</div>
+<div>
+    <h2>Performance Data</h2>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Tickets Remaining</th>
+            <th>Usher</th>
+        </tr>
+        @foreach (PerformanceData perf in Model.Performances)
+            {
+            <tr>
+                <td>
+                    @perf.StartTime
+                </td>
+                <td>
+                    @perf.TicketsRemaining
+                </td>
+                <td>
+                    @perf.Usher
+                </td>
+            </tr>
+        }
+    </table>
+</div>

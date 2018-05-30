@@ -1,0 +1,59 @@
+﻿
+@using EpiMeetup2018.CustomViews.Models.Pages
+
+@model ProductionDetailsPage
+
+@{ Layout = "~/Views/Shared/_EditViewLayout.cshtml"; }
+
+    <p class="noteAlt">The content below is meant to give you an idea of the kinds of things you may want to put on an "About The Page Type" View.  Most of it does not actually apply to this demo site. <br /> <br />
+        If you are creating a companion guide/CMS user manual for your site, one idea would be to put that information in this View as well for easy access.</p>
+    <h1>About The Production Page Type</h1>
+    <div>
+        <h2 class="blue">When would I use this page?</h2>
+        <p>
+            This page is meant to display data about a specific production.  It is integrated with FakeCommerce to pull in and send out data about a specific production
+            automatically.  If you are intending to this page to be pure content without integration, use the <em>Content Page</em> instead.
+        </p>
+        <p>If you would like to convert this page to a <em>Content Page</em>, please click <a href="#">here</a>.</p>
+    </div>
+    <div>
+        <h2 class="blue">Editor Notes</h2>
+        <h3>Recommended Image Dimensions</h3>
+        <table border="1">
+            <tr>
+                <th>Property Name</th>
+                <th>Dimensions</th>
+            </tr>
+            <tr>
+                <td>Hero Image</td>
+                <td>1920x1080</td>
+            </tr>
+            <tr>
+                <td>Cast Image</td>
+                <td>187x248</td>
+            </tr>
+        </table>
+        <h3>Feature Video Notes</h3>
+        <img src="/globalassets/test-images/videothumb.png">
+        <p>
+            The Feature Video has multiple properties for video source.  We recommend you only set one of these to prevent confusion.
+            However, if multiple properties are set, only one video will show based on the following priority:
+            <ol>
+                <li>Youtube</li>
+                <li>Vimeo</li>
+                <li>CMS</li>
+            </ol>
+        </p>
+        <h3>Hiding from the calendar</h3>
+        <p>To remove all performances of this production from showing up on the calendar, please clear out the property <strong>FakeCommerce ID</strong></p>
+    </div>
+    <div>
+        <h2 class="blue">Integration Notes</h2>
+        <p>
+            <ul>
+                <li>This page automatically syncs with FakeCommerce every 2 hours</li>
+                <li>If prices look off, you may not be in the correct sales context.  Click <a href="#">here</a> to check your current session information.</li>
+                <li>Everthing above this bullet point isn't actually true, but it sure sounds good!</li>
+            </ul>
+        </p>
+    </div>

@@ -1,0 +1,19 @@
+﻿@using EpiMeetup2018.CustomViews.Controllers.CustomViewControllers
+
+
+@model  OGImageViewModel
+
+<img src="@Model.Url" />
+
+<ul>
+
+    <li>
+        <strong class="@(Model.Height > 600 ? "green" : "red")">Height: @Model.Height</strong>
+    </li>
+    <li>
+        <strong class="@(Model.Width > 315 ? "green" : "red")">Width: @Model.Width</strong>
+    </li>
+    <li>
+        <strong class="@(Model.FileSize < 8 ? "green" : "red")">File Size: @Model.FileSize MB</strong>
+    </li>
+</ul>

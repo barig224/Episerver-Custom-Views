@@ -1,0 +1,66 @@
+﻿
+@using EpiMeetup2018.CustomViews.Models.Pages;
+
+@model SEOPageBase
+
+
+@{ Layout = "~/Views/Shared/_EditViewLayout.cshtml"; }
+
+<p class="noteAlt">
+    Use this View to give the editor more information about how they should populate their SEO properties. <br /> <br />
+    For simpler properties, you may just want to set the "Description" of the property instead so users can see them in All Properties View, but this may be useful
+    when you want to give more information than can fit in that tiny space.
+</p>
+
+<h1>SEO Properties</h1>
+
+<div>
+    <h2>OG:Image</h2>
+    <p class="noteAlt">
+        Info below from <a href="https://developers.facebook.com/docs/sharing/best-practices#images" target="_blank">https://developers.facebook.com/docs/sharing/best-practices#images</a>
+    </p>
+    <p>The og:image tag determines which image shows up when users share this page on social media. <br /> <br /> Use images that are at least <u>1200 x 630 pixels</u> for the best display on high resolution devices. At the minimum, you should use images that are <u>600 x 315 pixels</u> to display link page posts with larger images. Images can be up to <u>8MB</u> in size.</p>
+    <p><strong>Current Image</strong></p>
+    @if (!EPiServer.Core.ContentReference.IsNullOrEmpty(Model.OGImage))
+    {
+        Html.RenderAction("Index", "OGImage", new { ogImage = Model.OGImage });
+    }
+    else
+    {
+        <p class="noteWarning">You do not have an OG:Image set for this page, which mean social shares will try its best to find an image to use.  You should <me>really</me> consider setting this property.</p>
+    }
+</div>
+
+
+@using (Html.BeginForm("UpdateTitle", "SEOProperties", FormMethod.Post))
+{
+    <div>
+        <h2>Title</h2>
+        <p class="noteAlt">
+            Info below from <a href="https://moz.com/learn/seo/title-tag" target="_blank">https://moz.com/learn/seo/title-tag</a>
+        </p>
+        <p>A title tag is an HTML element that specifies the title of a web page. Title tags are displayed on search engine results pages (SERPs) as the clickable headline for a given result, and are important for usability, SEO, and social sharing. The title tag of a web page is meant to be an accurate and concise description of a page's content.</p>
+        <ul>
+            <li>
+                <strong>Optimal format:</strong> Primary Keyword - Secondary Keyword | Brand Name
+            </li>
+            <li><strong>Optimal length:</strong> 50-60 chars</li>
+            <li>
+                <strong>Current Value:</strong>
+                @Html.EditorFor(m => m.SEOTitle)
+                @Html.HiddenFor(m => m.ContentLink.ID)
+                <input type="submit" value="Update" />
+            </li>
+            @if(ViewData["changed"] != null)
+            {
+                <p class="noteCheck">Published!  Since we are in an iframe, as soon as we switch back to OPE/All Properties view we'll be on a previously published version.  Please refresh your browser manually.</p>
+            }
+        </ul>
+    </div>
+}
+
+
+
+
+
+

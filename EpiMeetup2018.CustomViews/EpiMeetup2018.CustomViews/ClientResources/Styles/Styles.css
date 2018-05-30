@@ -1,0 +1,28 @@
+﻿/*Icons via https://icons8.com*/ 
+
+.Sleek .prodInfo {
+    background: url('../../Static/icons8-theatre-mask-24.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.Sleek .aboutThisPageType {
+    background: url('../../Static/icons8-about-24.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.Sleek .heroEditor {
+    background: url('../../Static/icons8-deadpool-24.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.Sleek .seoProperties {
+    background: url('../../Static/icons8-increase-24.png') no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+
+

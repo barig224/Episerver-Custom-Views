@@ -1,0 +1,14 @@
+﻿@model EpiMeetup2018.CustomViews.Models.Blocks.HeroBlock
+
+<div class="hero">
+    <div class="hero-header-container">
+        <div class="hero-header" style="left: @Model.HeroTextLeftCoordinate%; top: @Model.HeroTextTopCoordinate%" @Html.EditAttributes(m => m.HeroText)>
+            <h1>@Model.HeroText</h1>
+        </div>
+    </div>
+
+
+    <div>
+        <img src="@Model.ImageUrl" />
+    </div>
+</div>

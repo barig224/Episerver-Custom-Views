@@ -1,0 +1,37 @@
+﻿
+@using EpiMeetup2018.CustomViews.Models.Pages
+
+@model ProductionDetailsPage
+
+@{ Layout = "~/Views/Shared/_EditViewLayout.cshtml"; }
+
+<p class="noteAlt">Here's an example of a custom editor for a complex property.  NO DOJO REQUIRED!</p>
+
+
+@if (!EPiServer.Core.ContentReference.IsNullOrEmpty(Model.Hero.HeroImage) && !string.IsNullOrEmpty(Model.Hero.HeroText))
+{
+    using (Html.BeginForm("UpdateHero", "HeroEditor", FormMethod.Post))
+    {
+        <div class="hero-preview">
+            <div class="hero-preview-section" id="header">
+                <h4 class="hero-preview-section-header">Text Coordinates:</h4>
+                <label class="hero-preview-section-label" for="headerLeft">Left %</label>
+                <input class="hero-preview-section-input left" type="number" id="headerLeft" name="headerLeft" min="0" max="100" />
+                <label class="hero-preview-section-label" for="headerTop">Top %</label>
+                <input class="hero-preview-section-input top" type="number" id="headerTop" name="headerTop" min="0" max="100" />
+                <input type="submit" value="Publish Updates" />
+            </div>
+        </div>
+        @Html.HiddenFor(m => m.ContentLink.ID)
+        if (ViewData["changed"] != null)
+        {
+            <p class="noteCheck">Published!  Since we are in an iframe, as soon as we switch back to OPE/All Properties view we'll be on a previously published version.  Please refresh your browser manually.</p>
+        }
+    }
+
+    @Html.PropertyFor(m => m.Hero)
+}
+else
+{
+    <p class="noteWarning">Hero image is not set.  Once you set a hero image and a text caption, come back to this page!</p>
+}
